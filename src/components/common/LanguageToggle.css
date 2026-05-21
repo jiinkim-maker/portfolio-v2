@@ -1,0 +1,31 @@
+.global-language-toggle {
+  position: fixed; /* 🛠 화면 우측 상단 고정 */
+  top: 28px;
+  right: 40px;
+  z-index: 9999;
+  border: 1px solid rgba(244, 234, 219, 0.22);
+  background: rgba(16, 20, 15, 0.72);
+  backdrop-filter: blur(14px);
+  color: rgba(244, 234, 219, 0.55);
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+}
+
+.global-language-toggle .active {
+  color: #feae17;
+}
+
+@media (max-width: 768px) {
+  .global-language-toggle {
+    top: 20px;
+    right: 20px;
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+}

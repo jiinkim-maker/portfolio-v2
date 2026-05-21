@@ -1,0 +1,532 @@
+/* =========================================================
+   PROJECTS PAGE
+   - 전체 프로젝트 페이지 레이아웃
+========================================================= */
+.projects-page {
+  min-height: 100vh;
+  padding: 56px;
+  background: #f6f1e8;
+  color: #10140f;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+.projects-back {
+  display: inline-flex;
+  margin-bottom: 82px;
+  color: rgba(16, 20, 15, 0.58);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.projects-back:hover {
+  color: #8a5d11;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.projects-hero {
+  max-width: 980px;
+  margin-bottom: 90px;
+}
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+.projects-hero h1 {
+  margin: 0;
+  font-family: "Caudex", serif;
+  font-size: clamp(58px, 8vw, 120px);
+  line-height: 0.94;
+  letter-spacing: -0.08em;
+}
+
+/* =========================================================
+   PAGE DESCRIPTION
+========================================================= */
+.projects-hero p {
+  max-width: 720px;
+  margin-top: 28px;
+  color: rgba(16, 20, 15, 0.66);
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================================
+   FILTER BUTTONS WRAPPER
+========================================================= */
+.projects-filters {
+  display: flex;
+  gap: 14px;
+  margin-top: 46px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   FILTER BUTTON
+========================================================= */
+.filter-btn {
+  height: 42px;
+  padding: 0 22px;
+  border: 1px solid rgba(16, 20, 15, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.42);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(16, 20, 15, 0.72);
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* 🛠 hover */
+.filter-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16, 20, 15, 0.24);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+/* 🛠 active */
+.filter-btn.active {
+  background: #10140f;
+  color: #f6f1e8;
+  border-color: #10140f;
+}
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 38px;
+  align-items: start;
+}
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+.project-card {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   LARGE CARD
+========================================================= */
+.project-card.large {
+  transition: transform 0.35s ease;
+}
+
+/* 🛠 hover */
+.project-card.large:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+.project-image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background: #e8decc;
+  min-height: 420px;
+
+  box-shadow:
+    0 22px 55px rgba(16, 20, 15, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+.project-image-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.4s ease;
+}
+
+/* 🛠 hover zoom */
+.project-card.large:hover img {
+  transform: scale(1.045);
+}
+
+/* =========================================================
+   SHIMMER EFFECT
+   - GIF 느낌의 반복 빛 애니메이션
+========================================================= */
+.project-shine {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 42%,
+    rgba(255, 255, 255, 0.42) 50%,
+    rgba(255, 255, 255, 0.08) 58%,
+    transparent 100%
+  );
+
+  transform: translateX(-120%);
+  animation: projectShine 4.5s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+/* 🛠 shimmer keyframes */
+@keyframes projectShine {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  48% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* =========================================================
+   PROJECT INFO
+========================================================= */
+.project-info {
+  margin-top: 22px;
+  padding-inline: 6px;
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+.project-info span {
+  display: inline-flex;
+
+  margin-bottom: 12px;
+
+  color: #8a5d11;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+.project-info h2 {
+  margin: 0;
+
+  font-family: "Caudex", serif;
+  font-size: clamp(28px, 3vw, 40px);
+
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+
+  color: #10140f;
+}
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+.project-info p {
+  max-width: 520px;
+
+  margin-top: 14px;
+
+  color: rgba(16, 20, 15, 0.64);
+
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================================
+   WIDE CARD
+   - CES / Galaxy Unpacked
+========================================================= */
+.project-card.wide {
+  overflow: hidden;
+
+  min-height: 150px;
+
+  border-radius: 32px;
+
+  background: linear-gradient(135deg, #171b16 0%, #232922 100%);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+
+  box-shadow: 0 22px 55px rgba(16, 20, 15, 0.12);
+}
+
+/* 🛠 hover */
+.project-card.wide:hover {
+  transform: translateY(-5px);
+
+  background: linear-gradient(135deg, #1c211c 0%, #2d352b 100%);
+}
+
+/* =========================================================
+   WIDE CARD CONTENT
+========================================================= */
+.wide-card-content {
+  height: 100%;
+
+  padding: 28px 36px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* =========================================================
+   WIDE CATEGORY
+========================================================= */
+.wide-card-content span {
+  display: inline-flex;
+
+  margin-bottom: 18px;
+
+  color: #feae17;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   WIDE TITLE
+========================================================= */
+.wide-card-content h2 {
+  margin: 0;
+
+  font-family: "Caudex", serif;
+
+  font-size: clamp(28px, 3vw, 38px);
+
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+
+  color: #f6f1e8;
+}
+
+/* =========================================================
+   WIDE SUBTITLE
+========================================================= */
+.wide-card-content p {
+  max-width: 640px;
+
+  margin-top: 18px;
+  margin-bottom: 5px;
+
+  color: rgba(246, 241, 232, 0.72);
+
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: -0.005em;
+}
+
+/* =========================================================
+   MASONRY 느낌 배치
+========================================================= */
+.project-card:nth-child(odd).large {
+  margin-top: 0;
+}
+
+.project-card:nth-child(even).large {
+  margin-top: 90px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 960px) {
+  .projects-page {
+    padding: 42px 24px 90px;
+  }
+
+  .projects-back {
+    margin-bottom: 56px;
+  }
+
+  .projects-hero {
+    margin-bottom: 62px;
+  }
+
+  .projects-hero h1 {
+    font-size: clamp(44px, 12vw, 72px);
+    line-height: 1;
+  }
+
+  .projects-hero p {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .projects-filters {
+    margin-top: 36px;
+    gap: 10px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .project-card:nth-child(even).large {
+    margin-top: 0;
+  }
+
+  .project-image-wrap,
+  .project-image-wrap img {
+    min-height: 300px;
+  }
+
+  .project-info h2 {
+    font-size: 32px;
+  }
+
+  .project-info p {
+    font-size: 15px;
+  }
+
+  .project-card.wide {
+    min-height: 190px;
+  }
+
+  .wide-card-content {
+    padding: 30px;
+  }
+
+  .wide-card-content h2 {
+    font-size: 40px;
+    line-height: 0.96;
+  }
+
+  .wide-card-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   PLACEHOLDER THUMBNAIL
+========================================================= */
+
+.project-placeholder {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(254, 174, 23, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #151b15 0%, #243124 100%);
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 24px;
+}
+
+/* subtle grid */
+
+.project-placeholder::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(244, 234, 219, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 234, 219, 0.03) 1px, transparent 1px);
+
+  background-size: 28px 28px;
+}
+
+/* fake dashboard bar */
+
+.project-placeholder::after {
+  content: "";
+
+  position: absolute;
+
+  top: 26px;
+  left: 24px;
+
+  width: 120px;
+  height: 10px;
+
+  border-radius: 999px;
+
+  background: rgba(244, 234, 219, 0.12);
+
+  box-shadow:
+    0 18px 0 rgba(244, 234, 219, 0.06),
+    0 36px 0 rgba(244, 234, 219, 0.04);
+}
+
+.project-placeholder span {
+  position: relative;
+  z-index: 2;
+
+  color: rgba(244, 234, 219, 0.48);
+
+  /* 🛠 수정 */
+  font-size: 22px;
+
+  /* 🛠 수정 */
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-wrap {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  /* 🛠 추가 */
+  height: 420px;
+}

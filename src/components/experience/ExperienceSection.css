@@ -1,0 +1,131 @@
+.experience-section {
+  min-height: 100vh;
+  padding: 120px 56px;
+  background: #10140f;
+  color: #f4eadb;
+}
+
+.experience-head {
+  max-width: 1180px;
+  margin: 0 auto 56px;
+}
+
+.experience-label {
+  margin: 0 0 18px;
+  color: #feae17;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.experience-head h2 {
+  max-width: 920px;
+  margin: 0;
+  font-family: "Caudex", serif;
+  font-size: clamp(44px, 6.2vw, 45px);
+  letter-spacing: -0.04em;
+  line-height: 1.2; /*줄간격*/
+}
+
+.experience-list {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.experience-card {
+  padding: 34px;
+  border-radius: 28px;
+  border: 1px solid rgba(244, 234, 219, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(244, 234, 219, 0.08),
+    rgba(244, 234, 219, 0.03)
+  );
+  backdrop-filter: blur(18px);
+}
+
+.experience-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid rgba(244, 234, 219, 0.12);
+  padding-bottom: 24px;
+}
+
+.experience-card-top h3 {
+  margin: 0;
+  font-family: "Caudex", serif;
+  font-size: 34px;
+}
+
+.experience-card-top p {
+  margin: 8px 0 0;
+  color: rgba(244, 234, 219, 0.66);
+  font-size: 15px;
+}
+
+.experience-card-top span {
+  color: #feae17;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.experience-summary {
+  max-width: 820px;
+  margin: 26px 0 0;
+  color: rgba(244, 234, 219, 0.76);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.experience-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.experience-metrics span {
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(254, 174, 23, 0.12);
+  color: #feae17;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.experience-works {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 28px;
+  margin: 32px 0 0;
+  padding-left: 18px;
+  color: rgba(244, 234, 219, 0.72);
+  line-height: 1.7;
+}
+
+.experience-works li::marker {
+  color: #feae17;
+}
+
+@media (max-width: 900px) {
+  .experience-section {
+    padding: 90px 24px;
+  }
+
+  .experience-card {
+    padding: 26px;
+  }
+
+  .experience-card-top {
+    flex-direction: column;
+  }
+
+  .experience-works {
+    grid-template-columns: 1fr;
+  }
+}

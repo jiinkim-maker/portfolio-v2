@@ -1,0 +1,320 @@
+.disaster-page {
+  min-height: 100vh;
+
+  /* 🛠 수정: 기존 프로젝트 페이지들과 동일한 다크 톤 */
+  background:
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(254, 174, 23, 0.12),
+      transparent 26%
+    ),
+    linear-gradient(180deg, #10140f 0%, #121712 100%);
+
+  color: #f4eadb;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.disaster-hero {
+  padding: 180px 72px 110px;
+}
+
+.disaster-category {
+  display: inline-block;
+
+  margin-bottom: 26px;
+
+  /* 🛠 수정 */
+  color: #feae17;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* 🛠 수정: 기존 프로젝트 타이틀 스타일 통일 */
+.disaster-title {
+  margin: 0;
+
+  font-family: "Caudex", serif;
+
+  font-size: clamp(58px, 7vw, 108px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  color: #f4eadb;
+}
+
+/* 🛠 수정 */
+.disaster-subtitle {
+  margin-top: 30px;
+
+  max-width: 980px;
+
+  font-size: 32px;
+  font-weight: 500;
+
+  line-height: 1.35;
+
+  color: rgba(244, 234, 219, 0.76);
+}
+
+/* 🛠 수정 */
+.disaster-description {
+  max-width: 820px;
+
+  margin-top: 42px;
+
+  font-size: 20px;
+
+  line-height: 1.92;
+
+  color: rgba(244, 234, 219, 0.72);
+}
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.disaster-overview {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+  padding: 0 72px 120px;
+}
+
+/* 🛠 수정: glassmorphism 통일 */
+.overview-card {
+  padding: 28px;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(244, 234, 219, 0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+.overview-card span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: rgba(244, 234, 219, 0.42);
+
+  font-size: 12px;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.overview-card h3 {
+  margin: 0;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: #f4eadb;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.disaster-section {
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 44px;
+
+  padding: 0 72px 140px;
+}
+
+.section-eyebrow {
+  color: rgba(244, 234, 219, 0.34);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-content p {
+  max-width: 920px;
+
+  margin: 0 0 28px;
+
+  font-size: 20px;
+
+  line-height: 1.95;
+
+  color: rgba(244, 234, 219, 0.76);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.disaster-image-section {
+  padding: 0 72px 140px;
+}
+
+.disaster-image-section img {
+  width: 100%;
+
+  border-radius: 34px;
+
+  border: 1px solid rgba(244, 234, 219, 0.08);
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.34);
+}
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.disaster-feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
+  padding: 0 72px 140px;
+}
+
+/* 🛠 수정: 회사 프로젝트 카드 스타일과 통일 */
+.feature-card {
+  padding: 34px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(244, 234, 219, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    transform 0.3s ease,
+    border 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+
+  border: 1px solid rgba(254, 174, 23, 0.26);
+}
+
+.feature-card h3 {
+  margin: 0 0 18px;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  color: #f4eadb;
+}
+
+.feature-card p {
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: rgba(244, 234, 219, 0.68);
+}
+
+/* =========================================================
+   STACK
+========================================================= */
+
+.disaster-stack {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  padding: 0 72px 140px;
+}
+
+/* 🛠 수정 */
+.disaster-stack span {
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(244, 234, 219, 0.08);
+
+  font-size: 14px;
+
+  color: rgba(244, 234, 219, 0.76);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .disaster-hero {
+    padding: 140px 24px 80px;
+  }
+
+  .disaster-overview {
+    grid-template-columns: 1fr;
+
+    padding: 0 24px 80px;
+  }
+
+  .disaster-section {
+    grid-template-columns: 1fr;
+
+    padding: 0 24px 80px;
+  }
+
+  .disaster-feature-grid {
+    grid-template-columns: 1fr;
+
+    padding: 0 24px 80px;
+  }
+
+  .disaster-image-section {
+    padding: 0 24px 80px;
+  }
+
+  .disaster-stack {
+    padding: 0 24px 100px;
+  }
+
+  .disaster-title {
+    font-size: 56px;
+
+    line-height: 1;
+  }
+
+  .disaster-subtitle {
+    font-size: 24px;
+
+    line-height: 1.4;
+  }
+
+  .disaster-description {
+    font-size: 17px;
+
+    line-height: 1.8;
+  }
+}

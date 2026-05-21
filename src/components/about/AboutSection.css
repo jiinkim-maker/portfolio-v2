@@ -1,0 +1,425 @@
+/* =========================================================
+   ABOUT SECTION 전체 영역
+   - About 섹션의 배경색, 전체 여백, 기본 글자색 설정
+========================================================= */
+.about-section {
+  min-height: 100vh;
+  padding: 120px 56px;
+  background: #f4eadb;
+  color: #10140f;
+}
+
+/* =========================================================
+   ABOUT 내부 컨테이너
+   - 콘텐츠 최대 너비와 가운데 정렬 담당
+========================================================= */
+.about-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ABOUT 라벨
+   - 'About' / '소개' 작은 상단 텍스트
+========================================================= */
+.about-label {
+  margin: 0 0 22px;
+  color: #8a5d11;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   ABOUT 메인 제목
+   - 큰 타이틀 영역
+   - span 단위로 줄바꿈 제어
+========================================================= */
+.about-title {
+  max-width: 1180px;
+  margin: 0;
+  font-family: "Caudex", serif;
+  font-size: clamp(54px, 7vw, 104px);
+  line-height: 0.96;
+  letter-spacing: -0.07em;
+  color: #10140f;
+}
+
+/* 🛠 제목 줄바꿈 직접 제어 */
+.about-title span {
+  display: block;
+}
+
+/* =========================================================
+   영어 모드 ABOUT 제목
+   - 영어 문장 길이에 맞춰 따로 조정
+========================================================= */
+.about-section.is-en .about-title {
+  max-width: 1080px;
+  font-size: clamp(44px, 6.2vw, 50px);
+  line-height: 1.13;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================================
+   한글 모드 ABOUT 제목
+   - 한글은 글자 단위로 쪼개지지 않도록 keep-all 적용
+========================================================= */
+.about-section.is-ko .about-title {
+  max-width: 1160px;
+  font-size: clamp(44px, 6.2vw, 45px);
+  letter-spacing: -0.04em;
+  line-height: 1.2; /*줄간격*/
+  word-break: keep-all;
+  line-break: strict;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 전체 블록
+   - About 타이틀 아래에 들어가는 요약표 영역
+========================================================= */
+.adventures-block {
+  margin-top: 92px;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 제목 영역
+   - 오른쪽 상단에 배치되는 제목 디자인
+========================================================= */
+.adventures-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 장식 아이콘
+   - 이미지 없이 텍스트 심볼로 만든 장식 요소
+========================================================= */
+.adventures-icon {
+  display: inline-block;
+  transform: rotate(-24deg);
+  font-size: 42px;
+  line-height: 1;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 제목 텍스트
+   - 사진 속 Recent adventures 느낌의 큰 타이포
+========================================================= */
+.adventures-heading h3 {
+  margin: 0;
+  max-width: 360px;
+  font-family: "Caudex", serif;
+  font-size: clamp(42px, 5vw, 50px);
+  line-height: 0.82;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 리스트
+   - 표 전체 컨테이너
+========================================================= */
+.adventures-list {
+  width: 100%;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 각 행
+   - 3열 구성: 역할 / 회사 / 기간
+========================================================= */
+.adventure-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.45fr;
+  align-items: center;
+  padding: 28px 0;
+  border-top: 1px solid rgba(16, 20, 15, 0.36);
+  font-family: "Poppins", sans-serif;
+  color: #10140f;
+}
+
+/* 🛠 마지막 행 하단선 */
+.adventure-row:last-child {
+  border-bottom: 1px solid rgba(16, 20, 15, 0.36);
+}
+
+/* =========================================================
+   RECENT ADVENTURES 1열: 역할/업무명
+========================================================= */
+.adventure-role {
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 2열: 회사/소속
+========================================================= */
+.adventure-company {
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+}
+
+/* =========================================================
+   RECENT ADVENTURES 3열: 기간
+========================================================= */
+.adventure-period {
+  justify-self: end;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   영어 모드 Recent Adventures
+========================================================= */
+.about-section.is-en .adventure-role,
+.about-section.is-en .adventure-company,
+.about-section.is-en .adventure-period {
+  font-size: 21px;
+}
+
+/* =========================================================
+   한글 모드 Recent Adventures
+   - 한글은 단어 단위 줄바꿈 유지
+========================================================= */
+.about-section.is-ko .adventure-role,
+.about-section.is-ko .adventure-company,
+.about-section.is-ko .adventure-period {
+  font-size: 21px;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   ABOUT 설명 문장
+   - Recent Adventures 아래에 배치되는 본문 설명
+========================================================= */
+.about-description {
+  max-width: 980px;
+  margin: 86px 0 0;
+  color: rgba(16, 20, 15, 0.72);
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.025em;
+}
+
+/* 🛠 설명 문장 줄바꿈 직접 제어 */
+.about-description span {
+  display: block;
+}
+
+/* =========================================================
+   영어 모드 ABOUT 설명
+========================================================= */
+.about-section.is-en .about-description {
+  max-width: 980px;
+  font-size: 19px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================================
+   한글 모드 ABOUT 설명
+========================================================= */
+.about-section.is-ko .about-description {
+  max-width: 1000px;
+  font-size: 21px;
+  line-height: 1.9;
+  letter-spacing: -0.035em;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   ABOUT 카드 컨테이너
+========================================================= */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 72px;
+}
+
+/* =========================================================
+   ABOUT 개별 카드
+========================================================= */
+.about-card {
+  min-height: 240px;
+  padding: 32px 30px;
+  border: 1px solid rgba(16, 20, 15, 0.12);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.34);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* 🛠 카드 hover 인터랙션 */
+.about-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.58);
+  border-color: rgba(16, 20, 15, 0.2);
+}
+
+/* =========================================================
+   ABOUT 카드 제목
+========================================================= */
+.about-card h3 {
+  margin: 0;
+  font-family: "Caudex", serif;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #10140f;
+}
+
+/* =========================================================
+   ABOUT 카드 본문
+========================================================= */
+.about-card p {
+  margin: 26px 0 0;
+  color: rgba(16, 20, 15, 0.68);
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: -0.02em;
+}
+
+/* 🛠 카드 본문 줄바꿈 직접 제어 */
+.about-card p span {
+  display: block;
+}
+
+/* =========================================================
+   영어 모드 카드 본문
+========================================================= */
+.about-section.is-en .about-card p {
+  font-size: 16px;
+  line-height: 1.72;
+  letter-spacing: -0.015em;
+}
+
+/* =========================================================
+   한글 모드 카드 본문
+========================================================= */
+.about-section.is-ko .about-card p {
+  font-size: 17px;
+  line-height: 1.78;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   태블릿 대응
+========================================================= */
+@media (max-width: 1100px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    min-height: auto;
+  }
+
+  .adventure-row {
+    grid-template-columns: 1fr 0.8fr 0.4fr;
+  }
+}
+
+/* =========================================================
+   모바일 대응
+========================================================= */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 90px 24px;
+  }
+
+  .about-label {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .about-title,
+  .about-section.is-en .about-title {
+    font-size: clamp(42px, 12vw, 62px);
+    line-height: 1.04;
+    letter-spacing: -0.06em;
+  }
+
+  .about-section.is-ko .about-title {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.07em;
+  }
+
+  .adventures-block {
+    margin-top: 70px;
+  }
+
+  .adventures-heading {
+    justify-content: flex-start;
+    margin-bottom: 36px;
+  }
+
+  .adventures-heading h3 {
+    text-align: left;
+    font-size: clamp(38px, 12vw, 58px);
+  }
+
+  .adventure-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 24px 0;
+  }
+
+  .adventure-role,
+  .adventure-company,
+  .adventure-period,
+  .about-section.is-en .adventure-role,
+  .about-section.is-en .adventure-company,
+  .about-section.is-en .adventure-period,
+  .about-section.is-ko .adventure-role,
+  .about-section.is-ko .adventure-company,
+  .about-section.is-ko .adventure-period {
+    font-size: 18px;
+  }
+
+  .adventure-period {
+    justify-self: start;
+    color: rgba(16, 20, 15, 0.55);
+  }
+
+  .about-description,
+  .about-section.is-en .about-description,
+  .about-section.is-ko .about-description {
+    margin-top: 64px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .about-cards {
+    margin-top: 54px;
+    gap: 16px;
+  }
+
+  .about-card {
+    padding: 26px 24px;
+    border-radius: 22px;
+  }
+
+  .about-card h3 {
+    font-size: 26px;
+  }
+
+  .about-card p,
+  .about-section.is-en .about-card p,
+  .about-section.is-ko .about-card p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+}

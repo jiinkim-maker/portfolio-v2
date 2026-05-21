@@ -1,0 +1,120 @@
+/* =========================================================
+   FLOATING MASCOT
+   - 이미지 없이 CSS로 만든 고정 장식 아이콘
+   - 스크롤해도 화면 같은 위치에 머무름
+========================================================= */
+.floating-mascot {
+  position: fixed; /* 🛠 스크롤해도 고정 */
+  top: 94px;
+  left: 60px;
+  z-index: 8000;
+  width: 62px;
+  height: 62px;
+  pointer-events: none;
+}
+
+/* =========================================================
+   얼굴 본체
+   🛠 수정: 원형 구름 + 털뭉치 느낌
+========================================================= */
+.mascot-face {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  /* 🛠 수정: 불규칙한 구름 형태 */
+  border-radius: 42% 60% 50% 52% / 46% 47% 60% 54%;
+
+  background: #f3bd45;
+
+  box-shadow:
+    inset -10px -10px 0 rgba(138, 93, 17, 0.1),
+    inset 6px 6px 0 rgba(255, 255, 255, 0.18),
+    0 12px 28px rgba(0, 0, 0, 0.14);
+
+  overflow: visible;
+
+  /* 🛠 수정: 살짝 떠다니는 느낌 */
+  animation: floatBlob 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   🛠 추가: 둥실둥실 애니메이션
+========================================================= */
+@keyframes floatBlob {
+  0% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+}
+
+/* =========================================================
+   눈
+========================================================= */
+.mascot-eye {
+  position: absolute;
+  top: 23px;
+  width: 3.8px;
+  height: 9px;
+  border-radius: 999px;
+  background: #10140f;
+}
+
+.mascot-eye.left {
+  left: 20.1px;
+}
+
+.mascot-eye.right {
+  right: 20.1px;
+}
+
+/* =========================================================
+   입
+========================================================= */
+.mascot-mouth {
+  position: absolute;
+  left: 50%;
+  top: 34.7px;
+  width: 17.5px;
+  height: 9px;
+  border-bottom: 6.3px solid #10140f;
+  border-radius: 0 0 995px 995px;
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   모바일에서는 너무 방해되지 않게 작게
+========================================================= */
+@media (max-width: 768px) {
+  .floating-mascot {
+    top: 74px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .mascot-eye {
+    top: 17px;
+  }
+
+  .mascot-eye.left {
+    left: 16px;
+  }
+
+  .mascot-eye.right {
+    right: 16px;
+  }
+
+  .mascot-mouth {
+    top: 27px;
+    width: 12px;
+    height: 6px;
+  }
+}

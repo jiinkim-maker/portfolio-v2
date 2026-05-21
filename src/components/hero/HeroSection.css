@@ -1,0 +1,240 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 36px 56px;
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(254, 174, 23, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #10140f 0%, #263526 48%, #10140f 100%);
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(244, 234, 219, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 234, 219, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+  pointer-events: none;
+}
+
+.hero-bg-text {
+  position: absolute;
+  right: -80px;
+  bottom: 40px;
+  font-family: "Shrikhand", serif;
+  font-size: clamp(100px, 18vw, 260px);
+  line-height: 0.85;
+  color: transparent;
+  -webkit-text-stroke: 1px #f4eadb;
+  z-index: 0;
+  user-select: none;
+  word-break: keep-all;
+}
+
+.hero-nav {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-logo {
+  font-family: "Caudex", serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  color: rgba(244, 234, 219, 0.72);
+}
+
+.hero-nav-links a {
+  transition: color 0.25s ease;
+}
+
+.hero-nav-links a:hover {
+  color: #feae17;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1280px;
+  margin-top: 14vh; /* 🛠 기존 18vh보다 위로 */
+}
+
+.hero-eyebrow {
+  margin: 0 0 22px;
+  color: #feae17;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* 🛠 수정: 영어 타이틀 */
+.hero-title {
+  margin: 0;
+  max-width: 1280px; /* 🛠 수정: 제목 영역 최대 너비 지정 */
+  font-family: "Caudex", serif;
+  font-size: clamp(54px, 6.2vw, 92px); /* 🛠 수정: 너무 커지지 않게 조정 */
+  line-height: 0.95; /*줄간격*/
+  letter-spacing: -0.005em; /*글자 간격*/
+  color: #f4eadb;
+}
+
+/* 🛠 수정: 각 줄을 독립된 줄로 표시 */
+.hero-title span {
+  display: block;
+}
+
+/* 🛠 수정: 영어는 단어 단위로 자연스럽게 */
+.hero-section.is-en .hero-title {
+  word-break: keep-all;
+  line-break: strict;
+  max-width: 1080px;
+  font-size: clamp(44px, 6.2vw, 50px);
+  line-height: 1.13;
+  letter-spacing: -0.02em;
+}
+
+/* 🛠 수정: 한국어는 글자 단위 쪼개짐 방지 */ /* 🛠 수정: 한국어 타이틀 */
+.hero-section.is-ko .hero-title {
+  word-break: keep-all;
+  line-break: strict;
+  max-width: 1080px;
+  font-size: clamp(44px, 6.2vw, 45px);
+  letter-spacing: -0.04em;
+  line-height: 1.2; /*줄간격*/
+}
+
+.hero-description {
+  max-width: 720px;
+  /* 🛠 위 / 좌우 / 아래 */
+  margin: 30px 0 28px;
+  color: rgba(244, 234, 219, 0.72);
+  font-size: 18px;
+  line-height: 1.82;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 28px;
+  /* 🛠 description 아래 여백으로 관리하므로 제거 */
+  margin-top: 0;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.primary-btn {
+  background: #feae17;
+  color: #10140f;
+}
+
+.secondary-btn {
+  border: 1px solid rgba(244, 234, 219, 0.28);
+  color: #f4eadb;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-btn:hover {
+  background: rgba(244, 234, 219, 0.08);
+}
+
+.hero-meta {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 34px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgba(244, 234, 219, 0.52);
+  font-size: 13px;
+  border-top: 1px solid rgba(244, 234, 219, 0.14);
+  padding-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 28px 24px;
+  }
+
+  .hero-nav {
+    align-items: flex-start;
+  }
+
+  .hero-nav-links {
+    display: none;
+  }
+
+  .hero-content {
+    margin-top: 16vh;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-meta {
+    left: 24px;
+    right: 24px;
+    flex-direction: column;
+    bottom: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title,
+  .hero-section.is-en .hero-title {
+    font-size: clamp(42px, 12vw, 62px);
+    line-height: 1.04;
+    letter-spacing: -0.06em;
+  }
+
+  .hero-section.is-ko .hero-title {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.07em;
+  }
+
+  .hero-content {
+    margin-top: 14vh;
+  }
+}
